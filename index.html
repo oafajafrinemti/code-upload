@@ -3,30 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Addition</title>
+    <title>calculation</title>
 </head>
 <body>
-    <h1 id="header"> Addition </h1>
-    <input id="number" type="text"  placeholder="enter a number">
+     <h1 id="header"> marks calculation</h1>
+<input id="textbox" type="text">
 <button id="btn"> submit </button>
 
-<script>
+     <script>
+let textbox = document.getElementById('textbox');
+let btn = document.getElementById('btn');
+let header= document.getElementById('header');
+btn.addEventListener( 'click', function(){ 
+    let marks = Number(textbox.value)
+if(marks>= 80){
+    header.innerHTML ='you got A+'
+}
+ else if(marks >= 70){
+    header.innerHTML ='you got A-'
+}
+else if(marks>= 60){
+    header.innerHTML ='you got B'
+}
+else if(marks>= 50){
+    header.innerHTML ='you got C'
+} 
+else if(marks>= 40){
+    header.innerHTML ='you got D'
+}
+else{
+    header.innerHTML= 'you fail the exam'
+}
 
-let header = document.getElementById("header");
-    let number = document.getElementById("number");
-  let btn = document.getElementById("btn");
-
-  btn.addEventListener('click' , function(){
-    let num = parseInt(number.value);
-    let sum = 0;
-    for( let i = 1; i <=num; i++){
-        sum +=i; }
-        header.innerHTML = `the sum of ${num} numbers of ${sum}` ;
-   console.log(sum);
-});
-
-
-</script>
     
+})
+
+
+
+
+     </script>
 </body>
 </html>
