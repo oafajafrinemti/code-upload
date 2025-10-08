@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+</head>
+<body>
+    <h1 id="header"> Addition </h1>
+    <input id="number" type="text"  placeholder="enter a number">
+<button id="btn"> submit </button>
+
+<script>
+
+let header = document.getElementById("header");
+    let number = document.getElementById("number");
+  let btn = document.getElementById("btn");
+
+  btn.addEventListener('click' , function(){
+    let num = parseInt(number.value);
+    let sum = 0;
+    for( let i = 1; i <=num; i++){
+        sum +=i; }
+        header.innerHTML = `the sum of ${num} numbers of ${sum}` ;
+   console.log(sum);
+});
+
+
+</script>
+    
+</body>
+</html>
